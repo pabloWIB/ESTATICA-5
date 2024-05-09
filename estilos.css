@@ -1,0 +1,438 @@
+html{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	font-family: Dancing;
+}
+
+
+@font-face{
+	font-family: "Dancing";
+	src: url('Fonts/DancingScript-Regular.ttf');
+}
+
+.Color{
+	padding: 0;
+	margin: 0;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 50%;
+	height: 100%;
+	background-color:rgb(255, 195, 31) ;
+}
+
+.Color2{
+	padding: 0;
+	margin: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 50%;
+	height: 100%;
+	background-color:#09003B ;
+}
+
+@media (max-width:800px){
+	.Color{
+		padding: 0;
+		margin: 0;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 50%;
+		background-color:rgb(255, 195, 31) ;
+	}
+}
+
+@media (max-width:800px){
+	.Color2{
+		padding: 0;
+		margin: 0;
+		position: fixed;
+		left: 0;
+		top: 50%;
+		width: 100%;
+		height: 50%;
+		background-color:#09003B;
+	}
+}
+
+.Main{
+	padding: 0;
+	margin: 0;
+	width: auto;
+	position: absolute;
+	top: -2%;
+	left: 1%;
+	color: #09003B;
+	font-weight: 500;
+	transition: .03s;
+	cursor: pointer;
+}
+
+.Main:hover{
+	transform: scale(1.1) ;
+	transition: .03s;
+}
+
+@media (max-width:800px){
+	.Main{
+		font-size: 12px;
+	}
+}
+
+.Navigation{
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	left: 50%;
+	top: 0%;
+	color:white ;
+	width: 40%;
+	height: auto;
+}
+
+
+.Navigation ol li{
+	float: left;
+	padding:5px 60px 0px 0px;
+	list-style: none;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+@media (max-width:800px){
+	.Navigation{
+		color: #09003B;
+		position: absolute;
+		left: 12%;
+		top:-1%;
+		width: 98%;
+		font-size: 15px;
+	}
+}
+
+@media (max-width:450px){
+	.Navigation{
+		color: #09003B;
+		position: absolute;
+		left: -8.6%;
+		top:5%;
+		width: 40%;
+		font-size: 15px;
+	}
+}
+
+@media (max-width:1137px){
+	.Navigation ol li{
+		float: left;
+		padding:5px 10px 0px 0px;
+		list-style: none;
+		font-weight: 600;
+		cursor: pointer;
+	}
+}
+
+.UnAside{
+	position: absolute;
+	top: 0%;
+	right: 0%;
+	width: 10%;
+	height: 7%;
+	opacity: 90%;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.Div0{
+	top: 40%;
+	right: 5%;
+	position: absolute;
+	width: 17%;
+	height: 8%;
+	background-color: rgb(255, 195, 31);
+	transition: 0.3s;
+}
+.Div1{
+	top: 60%;
+	right: 5%;
+	position: absolute;
+	width: 23%;
+	height: 8%;
+	background-color: rgb(255, 195, 31);
+	transition: 0.3s;
+}
+.Div2{
+	top: 80%;
+	right: 5%;
+	position: absolute;
+	width: 19%;
+	height: 8%;
+	background-color: rgb(255, 195, 31);
+}
+
+.UnAside:hover{
+	transform: scale(1.07) translate(-7px);
+	transition: .4s;
+}
+
+@media (max-width:800px){
+	.Div0 {
+		background-color: #09003B;
+		position: absolute;
+		top: 10%;
+		right: 2%;
+		width: 23%;
+		height: 8%;
+	}
+	.Div1 {
+		background-color: #09003B;
+		position: absolute;
+		top: 25%;
+		right: 2%;
+		width: 23%;
+	height: 8%;
+	}
+	.Div2 {
+		background-color: #09003B;
+		position: absolute;
+		top: 40%;
+		right: 2%;
+		width: 23%;
+		height: 8%;
+	}
+}
+
+.HeaderInformation{
+	position: absolute;
+	top: 20%;
+	width: 25%;
+	margin: 0px;
+	padding: 0;
+	left: 24.9%;
+	text-align: right;
+	color: #09003B;
+	visibility: visible;
+}
+
+.HeaderInformation2{
+	position: absolute;
+	top: 21%;
+	width: 25%;
+	margin: 0;
+	padding: 0;
+	right: 24.9%;
+	text-align: left;
+	color: rgb(255, 195, 31);
+	visibility: visible;
+}
+
+@media (max-width:800px){
+	.HeaderInformation{
+		visibility: hidden;
+	}
+	.HeaderInformation2{
+		visibility: hidden;
+	}
+}
+
+.HeaderInformationVIS{
+	position: absolute;
+	top: 50%;
+	left: 15%;
+	width: 70%;
+	text-align: center;
+	color: white;
+	visibility: hidden;
+}
+
+@media (max-width:800px){
+	.HeaderInformationVIS{
+		visibility: visible;
+		position: absolute;
+		top: 51%;
+		color: rgb(255, 195, 31);;
+		font-size: 12px;
+		overflow: hidden;
+	}
+	.HeaderInformationVIS p{
+		padding: 0;
+		margin: 0;
+		
+	}
+}
+
+.Derechos{
+	transform: rotate(270deg);
+	position: absolute;
+	bottom: 18.7%;
+	left: -8.6%;
+	width: 20%;
+	height: auto;
+	font-weight: 500;
+	cursor: none;
+}
+
+@media (max-width:800px){
+	.Derechos{
+		transform: rotate(0deg);
+		color: white;
+		position: absolute;
+		bottom: -10.5%;
+		left: 1.6%;
+		width: 80%;
+		font-size: 15px;
+
+	}
+}
+
+.thisisaSEC{
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	top: 55%;
+	left: 53%;
+	width: 44.2%;
+	height: auto;
+}
+
+.thisisaSEC h2{
+	font-family: monospace;
+	font-size: 13px;
+	color: rgb(255, 195, 31);;
+}
+
+.thisisaSEC p{
+	color: white;
+	font-size: 16px;
+}
+
+@media (max-width:800px){
+	.thisisaSEC{
+		position: absolute;
+		top: 28%;
+		left: 10%;
+		text-align: center;
+		width: 80%;
+	}
+
+	.thisisaSEC h2{
+		color: #09003B;
+		font-size: 15px;
+	}
+}
+
+@media (max-width: 395px){
+	.thisisaSEC{
+		position: absolute;
+		top: 20%;
+	}
+}
+
+.SUBscription{
+	color: rgb(255, 195, 31);
+	text-align: center;
+	position: absolute;
+	bottom: 14%;
+	right: 22%;
+	width: 10%;
+	height: auto;
+	animation: PLZsub 6s linear infinite alternate-reverse;
+	cursor: pointer;
+	font-weight: 700;
+	border-radius: 100px;
+	box-shadow: #04001C 6px 6px 10px;
+}
+
+@keyframes PLZsub{
+	0%{
+	}
+	50%{
+		transform: scale(1.06) ;
+	}
+	
+}
+
+@media (max-width:800px){
+	.SUBscription{
+		color: #09003B;
+		position: absolute;
+		bottom: 77%;
+		right: 42.7%;
+		width: 15%;
+		height: auto;
+		animation: PLZsub 6s linear infinite alternate-reverse;
+		cursor: pointer;
+		font-weight: 700;
+		border-radius: 100px;
+		box-shadow: rgb(74, 57, 9) 6px 6px 10px;
+	}
+	.SUBscription p{
+		font-size: 14px;
+	}
+}
+
+@media (max-width:496px){
+	.SUBscription{
+		width: 15%;
+		color: rgb(255, 195, 31);
+		box-shadow: #04001C 6px 6px 10px;
+		position: absolute;
+		bottom: 22%;
+		right: 42.7%;
+	}
+	.SUBscription p{
+		font-size: 10px;
+}
+
+}
+
+@media (max-width:376px){
+	.SUBscription{
+		width: 15%;
+		color: rgb(255, 195, 31);
+		box-shadow: #04001C 6px 6px 10px;
+		position: absolute;
+		bottom: 20%;
+		right: 42.7%;
+
+	}
+}
+
+.BeerIMG{
+	padding: 0;
+	margin: 0;
+	position: fixed;
+	left: 10%;
+	bottom: 0%;
+	width: 30%;
+	height: 42.5%;
+	
+}
+
+.BeerIMG img{
+	width: 100%;
+}
+
+@media (max-width:800px){
+	.BeerIMG{
+		position: absolute;
+		bottom: 1%;
+		left: 35%;
+		height: 30%;
+	}
+}
+
+@media (max-width:603px){
+	.BeerIMG{
+		position: absolute;
+		height: 30%;
+	}
+
+	.BeerIMG img{
+		position: absolute;
+		bottom: -22%;
+	}
+}
+
