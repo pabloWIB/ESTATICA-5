@@ -1,0 +1,25 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+npm-debug.log*
+
+# Node — the site itself has no dependencies, but `npx serve` may create these
+node_modules/
+.npm/
+
+# Environment
+.env
+.env.local
+
+# Hosting / build output
+.vercel/
+dist/

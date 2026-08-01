@@ -1,99 +1,99 @@
-[![563shots-so.png](https://i.postimg.cc/BvNqQqqM/563shots-so.png)](https://postimg.cc/4K7CWRH9)
-# Corona
+# Corona-Lifestyle-Landing
 
-A simple lifestyle brand website with a focus on "living as a sensory experience." Built with basic HTML, CSS, and JavaScript - perfect for beginners learning web development.
+Single-screen brand landing built on one line of copy — *living is a sensory experience* — broken mid-word across a two-colour divide.
 
-## What's Inside
+## Description
 
-- **HTML**: Basic website structure
-- **CSS**: Simple styling and layouts
-- **JavaScript**: Basic interactions (no fancy stuff!)
+A lifestyle brand page with almost no content: a mark, a headline and a hashtag. Everything rests on how the headline is set. The phrase is split mid-word — `LIVING IS A SEN` / `SORY EXPERIENCE` — so the break is a deliberate typographic device rather than a wrap.
 
-## Features
+The divide is the point. Below 768px it runs horizontally and the phrase breaks across two lines; from 768px up it runs vertically and the two halves sit on a shared baseline either side of the centre line, so the word "sensory" is cut by the colour boundary itself. That boundary is not pinned to a fixed percentage — it is drawn by the elements, so it always lands exactly where the word breaks, at any viewport size.
 
-- Home page with brand messaging
-- Products section
-- Shop merchandise area
-- About us page
-- Newsletter subscription
-- Mobile-friendly design
-- "#THISISLIVING" campaign section
+The split makes the markup announce "sen" and "sory" as two words, so the `h1` carries an `aria-label` with the whole phrase. The visual break survives; the sentence does too.
 
-## File Structure
+Type is Cinzel, a serif derived from Roman inscriptions, which is also what the emblem is lettered in. It is the only webfont; everything else is set in the system UI stack, which costs nothing to load.
+
+The project contains no JavaScript, no build step and no dependencies.
+
+## Tech stack
+
+| Layer | Technology | Detail |
+|---|---|---|
+| Markup | HTML5 | `index.html` and `404.html`, no templating |
+| Styling | CSS3 | Custom properties, Grid with `subgrid`, mobile-first `min-width` queries |
+| Typography | Cinzel variable | Self-hosted WOFF2, Latin subset, weights 400–900, 22.7 KB |
+| Typography | System UI stack | `system-ui` and platform fallbacks, 0 bytes |
+| Images | WebP | Emblem and artwork; PNG only for the favicon and the social card |
+| Scripting | None | The project contains no JavaScript files |
+| Build | None | The repository root is the deployable artifact |
+
+First load is 227 KB over 8 requests.
+
+## Project structure
 
 ```
-corona/
-├── index.html          # Main page
-├── style.css          # All the styling
-├── script.js          # Simple JavaScript
-└── images/            # Your photos
+.
+├── index.html                        # The landing. Single screen, no scroll.
+├── 404.html                          # Same visual system, links back to the root
+├── robots.txt                        # Allow all + sitemap pointer
+├── sitemap.xml                       # One URL; the site is one page
+├── assets/
+│   ├── css/
+│   │   ├── base.css                  # Tokens, @font-face, reset, base type
+│   │   ├── layout.css                # Page shell, header, stage grid, footer
+│   │   └── components.css            # Brand, headline, artwork, links, button
+│   ├── fonts/
+│   │   ├── cinzel-variable.woff2     # Subset to Latin, wght 400–900
+│   │   └── ofl.txt                   # SIL Open Font License for Cinzel
+│   └── img/
+│       ├── logo/
+│       │   ├── corona-emblem.webp    # 256px, the on-page mark
+│       │   ├── favicon.png           # 96px
+│       │   └── apple-touch-icon.png  # 180px
+│       └── content/
+│           ├── chrome-abstract.webp  # 800px, the one photographic asset
+│           └── og-card.png           # 1200x630 social card
+└── docs/
+    ├── auditoria.md                  # State of the project before the rebuild
+    └── cambios.md                    # What changed, by phase
 ```
 
-## How to Use
+## Running locally
 
-1. **Download the code**
-   ```
-   Download from: https://github.com/pabloWIB/Corona.git
-   ```
+The site is static, so any HTTP server works:
 
-2. **Open the website**
-   - Double-click `index.html` to open in your browser
-   - That's it! No servers needed.
-
-3. **Make changes**
-   - Edit `index.html` for content
-   - Change colors/fonts in `style.css`
-   - Add simple effects in `script.js`
-
-## Customization
-
-**Change the text:**
-- Replace "Lorem ipsum" with your real content
-- Update brand name from "Corona" to yours
-- Modify the "#THISISLIVING" hashtag
-
-**Change colors:**
-```css
-/* In style.css, find and change: */
-background-color: #your-color;
-color: #your-text-color;
+```bash
+npx serve@14 .
 ```
 
-**Add your images:**
-- Put your photos in the `images/` folder
-- Update image names in `index.html`
+Then open the address the server prints.
 
-## Where to Host (Free)
+Opening `index.html` straight off disk also renders correctly, with one caveat: Chrome treats `file://` documents as an opaque origin and blocks the `@font-face` request, so the headline falls back to the declared serif (Georgia, then Times New Roman). Serve over HTTP to see Cinzel.
 
-- **GitHub Pages**: Upload to GitHub, turn on Pages
-- **Netlify**: Drag and drop your folder
-- **Vercel**: Connect your GitHub account
+## Deployment
 
-## Beginner Tips
+Static hosting, no build command and no output directory — upload the repository root as it is. Canonical URL, Open Graph tags and `sitemap.xml` all point at `https://corona.wib.digital/`; change those four references if the domain changes.
 
-- Start small - change one thing at a time
-- Use browser "Inspect Element" to test changes
-- Save your work often
-- Don't worry about making it perfect
+Point the host's 404 handler at `404.html`. On Vercel and Netlify a root-level `404.html` is picked up automatically.
 
-## What You Can Add Later
+## Fonts and licensing
 
-- Contact form (using Formspree)
-- Photo gallery
-- Social media links
-- Simple animations
-- Google Analytics
+Cinzel is licensed under the SIL Open Font License; `assets/fonts/ofl.txt` is the licence as distributed and must travel with the font file if it is redistributed. The shipped `.woff2` is a Latin subset of the upstream variable font, generated with `fonttools`.
 
-## Need Help?
+## Image credits
 
-- W3Schools (great for HTML/CSS basics)
-- MDN Web Docs (when you're ready for more)
-- YouTube tutorials for specific features
+`chrome-abstract.webp` is not an original asset. The source file carries the watermark *by @songsandthespirits* and is credited in the page footer. Confirm the usage rights before publishing this page commercially.
 
-## Copyright
+## Author
 
-© PABLO - Feel free to use this as a learning template!
+**Pablo Nieto Pérez** — [wib.digital](https://wib.digital)
+GitHub: [@pabloWIB](https://github.com/pabloWIB)
 
----
+## Hire me
 
-*Keep it simple and keep building!*
+I build **custom internal tools, CRMs and dashboards** for small teams, and
+**conversion-focused websites** for businesses.
+
+- [Custom internal tool, CRM or dashboard](https://www.fiverr.com/pablonietop/build-a-custom-internal-app-for-your-business) — from $45
+- [Conversion-focused website](https://www.fiverr.com/pablonietop/convert-your-landing-page-design-to-code) — from $80
+- [All my services on Fiverr](https://www.fiverr.com/pablonietop)
+- [wib.digital](https://wib.digital)

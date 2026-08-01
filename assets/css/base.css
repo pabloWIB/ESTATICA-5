@@ -1,0 +1,136 @@
+/* ==========================================================================
+   base.css — design tokens, font face, reset, base typography
+   ========================================================================== */
+
+/* --------------------------------------------------------------- variables */
+
+:root {
+  /* Palette — both hues are the ones the original stylesheet already used:
+     rgb(255, 195, 31) and #09003B. Contrast of the gold/navy pair is 12.2:1. */
+  --color-gold: #ffc31f;
+  --color-navy: #09003b;
+  --color-paper: #ffffff;
+  --color-muted: #cfcbdb;
+
+  /* Typography */
+  --font-display: "Cinzel", Georgia, "Times New Roman", serif;
+  --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --text-xs: 0.75rem;    /* 12px */
+  --text-sm: 0.875rem;   /* 14px */
+  --text-base: 1rem;     /* 16px */
+  --text-lg: 1.25rem;    /* 20px */
+  --text-xl: 1.5rem;     /* 24px */
+  --text-display: clamp(1.5rem, 7.5vw, 2rem);
+
+  --tracking-tight: 0.02em;
+  --tracking-wide: 0.06em;
+  --tracking-wider: 0.18em;
+
+  --leading-tight: 1.05;
+  --leading-normal: 1.6;
+
+  /* Spacing scale — 4 / 8 / 16 / 24 / 32 / 48 / 64 / 96 */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+
+  /* Layout */
+  --gutter: clamp(var(--space-6), 5vw, var(--space-16));
+  --measure: 68ch;
+  --split-gap: clamp(var(--space-2), 1.5vw, var(--space-6));
+
+  /* Surfaces and motion */
+  --radius: 2px;
+  --border-width: 2px;
+  --transition: 180ms ease;
+  --focus-offset: 3px;
+}
+
+/* -------------------------------------------------------------- font face */
+
+@font-face {
+  font-family: "Cinzel";
+  src: url("../fonts/cinzel-variable.woff2") format("woff2");
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ------------------------------------------------------------------ reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body,
+h1,
+h2,
+p,
+figure {
+  margin: 0;
+}
+
+figure {
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+/* --------------------------------------------------------- base typography */
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-ui);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--color-navy);
+  background-color: var(--color-gold);
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: var(--leading-tight);
+}
+
+p {
+  max-width: var(--measure);
+}
+
+/* Every interactive element keeps a visible ring. currentColor is used so the
+   ring inherits whichever of the two brand colours the element sits on. */
+:focus-visible {
+  outline: var(--border-width) solid currentColor;
+  outline-offset: var(--focus-offset);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

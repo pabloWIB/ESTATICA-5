@@ -1,66 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0 max-scale=1.0 min-scale=1.0 user-scalable=no">
-	<title>Corona</title>
-	<link rel="stylesheet" href="estilos.css">
-	<link rel="icon" href="IMG/Corona.png" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Built by Pablo Nieto Pérez — wib.digital
+       Need changes or a new build? https://www.fiverr.com/pablonietop -->
+  <meta name="author" content="Pablo Nieto Pérez — wib.digital">
+  <link rel="author" href="https://www.fiverr.com/pablonietop">
+
+  <title>Corona — Living Is a Sensory Experience | Brand Landing</title>
+  <meta name="description" content="A single-screen brand landing for Corona: one line of copy split mid-word across a gold and navy divide, set in inscriptional type. No frameworks, no scripts.">
+
+  <link rel="canonical" href="https://corona.wib.digital/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://corona.wib.digital/">
+  <meta property="og:title" content="Corona — Living Is a Sensory Experience">
+  <meta property="og:description" content="A single-screen brand landing: one line of copy split mid-word across a gold and navy divide, set in inscriptional type.">
+  <meta property="og:image" content="https://corona.wib.digital/assets/img/content/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The phrase Living Is a Sensory Experience split mid-word across a gold and navy divide.">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="theme-color" content="#09003b">
+  <link rel="icon" href="assets/img/logo/favicon.png" type="image/png" sizes="96x96">
+  <link rel="apple-touch-icon" href="assets/img/logo/apple-touch-icon.png">
+
+  <link rel="preload" href="assets/fonts/cinzel-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Pablo Nieto Pérez",
+    "url": "https://wib.digital",
+    "jobTitle": "Web Designer and Developer",
+    "sameAs": [
+      "https://www.fiverr.com/pablonietop",
+      "https://www.linkedin.com/in/pablo-nieto-perez-39a530292"
+    ]
+  }
+  </script>
 </head>
-<input type="color">
+
 <body>
-	<div class="intentodecuadro">
-		<p>Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Doloremque ea maiores ipsum illo at officia, beatae cumque saepe odit tenetur quibusdam dolorum deleniti esse obcaecati magnam, recusandae et omnis delectus.</p>
-	</div>
-	<div class="Color"></div>
-	<div class="Color2"></div>
-			<main class="Main">
-				<h1>Corona </h1>
-			</main>
-			<nav class="Navigation">
-				<ol>
-					<li>PRODUCTS</li>
-					<li>SHOP MERCH</li>
-					<li>ABOUT US</li>
-				</ol>
-			</nav>
-			<aside class="UnAside">
-				<div class="Div0"></div>
-				<div class="Div1"></div>
-				<div class="Div2"></div>
-			</aside>
-			<header>
-				<section class="HeaderInformation">
-					<h2>LIVING IS A SEN</h2>
-					<p>Lorem, ipsum dolor sit amet consectetur adipisicing eillum voluptate, vel, modi, impedit nam doloremque duc</p>
-				</section>
-				<section class="HeaderInformation2">
-					<h2>SORY EXPERIENCE</h2>
-					<p>lit. Molestiae quia, consectetur tempore quasi. Est libero imus sapiente facilis voluptatum nisi odio repellendus in.</p>
-				</section>
-				<section class="HeaderInformationVIS">
-					<h2>LIVING IS A SENSORY EXPERIENCE</h2>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui omnis quaerat dignissimos quod reiciendis ratione quam, nesciunt animi minima libero possimus molestiae vero sunt maxime, incidunt, sint saepe odit. Voluptatem.</p>
-				</section>
-			</header>
-			<section class="thisisaSEC">
-				<div>
-					<h2>#THISISLIVING</h2>
-					<p>Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Aut veniam, cum odit, quo tempore, voluptatum necessitatibus minima quae nobis blanditiis dolores maxime, corrupti? Repudiandae quos alias, in doloribus facere harum!</p>
-				</div>
-			</section>
-			<section>
-				<div class="SUBscription">
-					<p>SUSCRIBE</p>
-				</div>
-			</section>
+  <div class="page">
+    <header class="site-header">
+      <p class="brand">
+        <img class="brand__mark" src="assets/img/logo/corona-emblem.webp" width="256" height="256" alt="">
+        <span class="brand__name">Corona</span>
+      </p>
+      <span class="rule-stack" aria-hidden="true"></span>
+    </header>
 
-			<div class="BeerIMG">
-				<img src="IMG/20.jpg" alt="">
-			</div>
+    <main class="stage">
+      <!-- The break is a typographic device, not a wrap. The two halves are
+           separate blocks so the divide can run between them, which would make
+           an assistive technology announce "sen" and "sory" as two words; the
+           label restores the phrase without duplicating it in the DOM. -->
+      <h1 class="headline" aria-label="Living is a sensory experience"><span class="headline__half headline__half--start">Living is a sen</span><span class="headline__half headline__half--end">sory experience</span></h1>
 
-			<footer class="Derechos">
-				<div><p>©Copyright PABLO</p></div>
-			</footer>		
+      <p class="statement">#ThisIsLiving</p>
+
+      <figure class="artwork">
+        <img src="assets/img/content/chrome-abstract.webp" width="800" height="1001" fetchpriority="high" decoding="async"
+             alt="Liquid chrome forms dissolving into white light against a dark green ground.">
+      </figure>
+    </main>
+
+    <footer class="site-footer">
+      <p class="site-footer__line site-footer__line--credits">
+        Artwork by @songsandthespirits. Type set in Cinzel, released under the
+        <a class="link" href="assets/fonts/ofl.txt">SIL Open Font License</a>.
+      </p>
+      <p class="site-footer__line site-footer__line--author">
+        Built by
+        <a class="link" href="https://wib.digital" target="_blank" rel="noopener noreferrer">Pablo Nieto Pérez</a>
+        <span class="site-footer__sep" aria-hidden="true">&middot;</span>
+        <a class="link" href="https://github.com/pabloWIB" target="_blank" rel="noopener noreferrer">@pabloWIB</a>
+      </p>
+      <p class="site-credit">
+        Built by <a href="https://wib.digital" rel="noopener">wib.digital</a> —
+        <a href="https://www.fiverr.com/pablonietop" rel="noopener">hire me on Fiverr</a>
+      </p>
+    </footer>
+  </div>
 </body>
 </html>
