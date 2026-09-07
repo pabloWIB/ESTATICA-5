@@ -71,9 +71,9 @@ Opening `index.html` straight off disk also renders correctly, with one caveat: 
 
 ## Deployment
 
-Static hosting, no build command and no output directory — upload the repository root as it is. Canonical URL, Open Graph tags and `sitemap.xml` all point at `https://corona.wib.digital/`; change those four references if the domain changes.
+Static hosting, no build command and no output directory — upload the repository root as it is. Canonical URL, Open Graph tags and `sitemap.xml` all point at `https://pablowib.github.io/Corona-Lifestyle-Landing/`; change those four references if the domain changes.
 
-Point the host's 404 handler at `404.html`. On Vercel and Netlify a root-level `404.html` is picked up automatically.
+Point the host's 404 handler at `404.html`. On GitHub Pages and Netlify a root-level `404.html` is picked up automatically.
 
 ## Fonts and licensing
 
